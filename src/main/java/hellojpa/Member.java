@@ -1,14 +1,19 @@
 package hellojpa;
 
+import lombok.AllArgsConstructor;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity//jpa가 괸리해야 함을 명시
+@AllArgsConstructor
 public class Member{
 
     @Id
     private Long id;
     private String name;
+
+    public Member() {}
 
     public Long getId() {
         return id;
