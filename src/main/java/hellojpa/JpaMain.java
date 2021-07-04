@@ -1,7 +1,6 @@
 package hellojpa;
 
 import javax.persistence.*;
-import java.util.List;
 
 public class JpaMain {
     public static void main(String[] args) {
@@ -15,12 +14,12 @@ public class JpaMain {
         tx.begin();
         try{
             //--비영속 상태--
-            Member member = new Member();
-            member.setId(100L);
-            member.setName("JPA");
-
-            // --영속 상태--  (아직 DB에 저장 X)
-            em.persist(member);
+//            Member member = new Member();
+//            member.setId(100L);
+//            member.setName("JPA");
+//
+//            // --영속 상태--  (아직 DB에 저장 X)
+//            em.persist(member);
 
             // 트랜잭션을
             tx.commit();

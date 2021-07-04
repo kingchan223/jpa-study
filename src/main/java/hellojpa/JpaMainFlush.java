@@ -16,11 +16,11 @@ public class JpaMainFlush {
 
         try{
 
-            Member member = new Member(105L, "member");
-            //member는 영속화 된다.
-
-            //member를 준영속화하기 -> 이제 JPA가 관리하지 않는 엔티티가 된다.
-            em.detach(member);
+//            Member member = new Member(105L, "member");
+//            //member는 영속화 된다.
+//
+//            //member를 준영속화하기 -> 이제 JPA가 관리하지 않는 엔티티가 된다.
+//            em.detach(member);
 
             tx.commit();
 

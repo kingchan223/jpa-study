@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class JpaMainDirtyChecking {
+public class JpaMainObjectEntity {
     public static void main(String[] args) {
         /*EntityManagerFactory를 만든다.*/
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
@@ -17,13 +17,12 @@ public class JpaMainDirtyChecking {
         tx.begin();
 
         try{
-//            //엔티티 생성
-//            // id:102인 멤버의 name은 member1 입니다.
-//            Member findMember = em.find(Member.class, 102L);
-//
-//            //위에서 조회한 멤버의 이름을 changedMember1로 변경
-//            findMember.setName("changedMember1");
 
+            Member member = new Member();
+//            member.setId("ID_A");
+            member.setUsername("C");
+
+            em.persist(member);
             tx.commit();
 
         }catch(Exception e){

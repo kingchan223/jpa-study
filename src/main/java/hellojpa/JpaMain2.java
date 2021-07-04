@@ -23,29 +23,29 @@ public class JpaMain2 {
 //            member.setName("helloB");
 //            em.persist(member);
 
-            /*찾기*/
-            Member findMember = em.find(Member.class, 1L);
-            System.out.println("findMember.getId = " + findMember.getId());
-            System.out.println("findMember.getName = " + findMember.getName());
-
-            /*수정*/
-//            findMember.setName("hiA");
-
-            /*JPQL: 전체 회원 검색*/
-//            List<Member> result = em.createQuery("select m from Member as m", Member.class)
-//                                                            .getResultList();
-
-
-            /*JPQL:페이징하고 싶을 때*/
-            List<Member> result2 = em.createQuery("select m from Member as m", Member.class)
-                    .setFirstResult(1)
-                    .setMaxResults(10)
-                    .getResultList();
-
-
-            for (Member member : result2) {
-                System.out.println("member = " + member.getName());
-            }
+//            /*찾기*/
+//            Member findMember = em.find(Member.class, 1L);
+//            System.out.println("findMember.getId = " + findMember.getId());
+//            System.out.println("findMember.getName = " + findMember.getName());
+//
+//            /*수정*/
+////            findMember.setName("hiA");
+//
+//            /*JPQL: 전체 회원 검색*/
+////            List<Member> result = em.createQuery("select m from Member as m", Member.class)
+////                                                            .getResultList();
+//
+//
+//            /*JPQL:페이징하고 싶을 때*/
+//            List<Member> result2 = em.createQuery("select m from Member as m", Member.class)
+//                    .setFirstResult(1)
+//                    .setMaxResults(10)
+//                    .getResultList();
+//
+//
+//            for (Member member : result2) {
+//                System.out.println("member = " + member.getName());
+//            }
 
             tx.commit();
 
