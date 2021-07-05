@@ -20,6 +20,8 @@ public class Member{
 
     @ManyToOne//멤버 입장에서는 자기가 many, 팀이 one
     @JoinColumn(name="TEAM_ID")//Team테이블의 TEAM_ID와 조인
+
+    /*외래키가 있는 곳이 주인이다.*/
     private Team team;
 
 //    @Column(name="TEAM_ID")
