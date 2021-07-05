@@ -1,4 +1,4 @@
-package hellojpa;
+package hellojpa.Entity;
 
 public enum RoleType {
     USER, ADMIN

@@ -1,7 +1,8 @@
 package hellojpa;
 
+import hellojpa.Entity.Member;
+
 import javax.persistence.*;
-import java.util.List;
 
 public class JpaMainFlush {
     public static void main(String[] args) {
@@ -15,12 +16,21 @@ public class JpaMainFlush {
         tx.begin();
 
         try{
-
-//            Member member = new Member(105L, "member");
-//            //member는 영속화 된다.
 //
-//            //member를 준영속화하기 -> 이제 JPA가 관리하지 않는 엔티티가 된다.
-//            em.detach(member);
+//            Member member1 = new Member();
+//            member1.setUsername("SE1");
+//
+//            Member member2 = new Member();
+//            member2.setUsername("SE2");
+//
+//            Member member3 = new Member();
+//            member3.setUsername("SE3");
+//
+//            System.out.println("==================");
+//            em.persist(member1);
+//            em.persist(member2);
+//            em.persist(member3);
+//            System.out.println("==================");
 
             tx.commit();
 
