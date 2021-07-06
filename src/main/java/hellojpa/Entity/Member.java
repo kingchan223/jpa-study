@@ -24,16 +24,18 @@ public class Member{
     /*외래키가 있는 곳이 주인이다.*/
     private Team team;
 
-//    @Column(name="TEAM_ID")
-//    private Long teamId;
-
-
     public Team getTeam() {
         return team;
     }
 
     public void setTeam(Team team) {
         this.team = team;
+    }
+
+    /* 연관관계 편의 메소드 */
+    public void changeTeam(Team team) {
+        this.team = team;
+        team.getMembers().add(this);
     }
 
     public Long getId() {
