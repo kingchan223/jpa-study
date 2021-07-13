@@ -1,7 +1,6 @@
 package hellojpa;
 
-import hellojpa.Entity.Member;
-import hellojpa.Entity.Team;
+
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -21,12 +20,12 @@ public class JpaMainRelationalMapping3 {
 
         try{
 
-            Member findMember = em.find(Member.class, 2L);
-            System.out.println("findMember = " + findMember.getUsername());
-            Team team = em.find(Team.class, 3L);
-
-            //setTeam()으로 팀을 수정
-            findMember.setTeam(team);
+//            Member findMember = em.find(Member.class, 2L);
+//            System.out.println("findMember = " + findMember.getUsername());
+//            Team team = em.find(Team.class, 3L);
+//
+//            //setTeam()으로 팀을 수정
+//            findMember.setTeam(team);
 
             tx.commit();
         }catch(Exception e){

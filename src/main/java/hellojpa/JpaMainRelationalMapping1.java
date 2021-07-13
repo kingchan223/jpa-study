@@ -1,8 +1,5 @@
 package hellojpa;
 
-import hellojpa.Entity.Member;
-import hellojpa.Entity.Team;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -24,9 +21,9 @@ public class JpaMainRelationalMapping1 {
             /* 팀을 추가하고 멤버 추가하기 */
 
             // 팀 insert
-            Team team = new Team();
-            team.setName("ManCity");
-            em.persist(team);
+//            Team team = new Team();
+//            team.setName("ManCity");
+//            em.persist(team);
 
             //멤버 insert
 //            Member member = new Member();

@@ -1,7 +1,5 @@
 package hellojpa;
 
-import hellojpa.Entity.Member;
-import hellojpa.Entity.Team;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -21,13 +19,13 @@ public class JpaMainRelationalMapping4 {
         tx.begin();
 
         try{
-
-            Member findMember = em.find(Member.class, 4L);
-            List<Member> members = findMember.getTeam().getMembers();
-
-            for (Member member : members) {
-                System.out.println("member = " + member.getUsername());
-            }
+//
+//            Member findMember = em.find(Member.class, 4L);
+//            List<Member> members = findMember.getTeam().getMembers();
+//
+//            for (Member member : members) {
+//                System.out.println("member = " + member.getUsername());
+//            }
 
             tx.commit();
         }catch(Exception e){
