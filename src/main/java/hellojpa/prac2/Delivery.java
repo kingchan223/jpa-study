@@ -2,7 +2,7 @@ package hellojpa.prac2;
 
 import javax.persistence.*;
 
-//@Entity
+@Entity
 public class Delivery {
 
     @Id @GeneratedValue

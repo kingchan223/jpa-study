@@ -2,7 +2,7 @@ package hellojpa.prac2;
 
 import javax.persistence.*;
 
-//@Entity
+@Entity
 public class Category_Item {
     @Id @GeneratedValue
     @Column(name ="CATEGORY_ITEM_ID")
