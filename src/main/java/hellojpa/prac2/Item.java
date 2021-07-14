@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+//@Entity
 @Table(name ="ITEMS")
 public class Item {
 
@@ -13,8 +13,7 @@ public class Item {
     private Long id;
 
     @OneToMany(mappedBy="item")
-    private List<Category_Item> categorysItems
-            = new ArrayList<>();
+    private List<Category_Item> categorysItems = new ArrayList<>();
 
     @OneToMany(mappedBy="item")
     private List<OrderItem> orderItems

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+//@Entity
 @Table(name="CATEGORYS")
 public class Category {
     @Id @GeneratedValue
@@ -14,8 +14,7 @@ public class Category {
     private String name;
 
     @OneToMany(mappedBy="category")
-    private List<Category_Item> categorysItems
-            = new ArrayList<>();
+    private List<Category_Item> categorysItems = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name="PARENT_ID")

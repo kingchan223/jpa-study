@@ -2,7 +2,7 @@ package hellojpa.prac2;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Delivery {
 
     @Id @GeneratedValue
@@ -20,6 +20,7 @@ public class Delivery {
 
     @OneToOne(mappedBy="delivery")//양방향 관계를 위해 만듦. 없어도 된다.
     private Order order;
-
-
 }
+
+
+

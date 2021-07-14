@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+//@Entity
 @Table(name ="ORDERS")
 public class Order {
 
@@ -22,8 +22,7 @@ public class Order {
     private Delivery delivery;
 
     @OneToMany(mappedBy="order")
-    private List<OrderItem> orderItems
-            = new ArrayList<OrderItem>();
+    private List<OrderItem> orderItems = new ArrayList<OrderItem>();
 
     private LocalDateTime orderDate;
 
