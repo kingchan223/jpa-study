@@ -3,7 +3,7 @@ package hellojpa.prac2;
 import javax.persistence.*;
 
 @Entity
-public class Delivery {
+public class Delivery  extends BaseEntity{
 
     @Id @GeneratedValue
     @Column(name="DELIVERY_ID")

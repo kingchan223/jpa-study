@@ -3,7 +3,7 @@ package hellojpa.prac2;
 import javax.persistence.*;
 
 @Entity
-public class Category_Item {
+public class Category_Item  extends BaseEntity{
     @Id @GeneratedValue
     @Column(name ="CATEGORY_ITEM_ID")
     private Long id;
