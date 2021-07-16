@@ -18,7 +18,7 @@ public class Delivery  extends BaseEntity{
     @Enumerated(EnumType.STRING)
     private DeliveryStatus status;
 
-    @OneToOne(mappedBy="delivery")//양방향 관계를 위해 만듦. 없어도 된다.
+    @OneToOne(mappedBy="delivery", fetch=FetchType.LAZY)//양방향 관계를 위해 만듦. 없어도 된다.
     private Order order;
 }
 

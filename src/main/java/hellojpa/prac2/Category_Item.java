@@ -8,11 +8,11 @@ public class Category_Item  extends BaseEntity{
     @Column(name ="CATEGORY_ITEM_ID")
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name ="CATEGORY_ID")
     private Category category;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="ITEM_ID")
     private Item item;
 }
