@@ -19,7 +19,7 @@ public class Member{
     private Period workPeriod;
 
     @Embedded
-    private Address homeAddress;
+    private Address address;
 
     @ElementCollection
     @CollectionTable(name="FAVORITE_FOOD",
@@ -69,11 +69,11 @@ public class Member{
     }
 
     public Address getHomeAddress() {
-        return homeAddress;
+        return address;
     }
 
-    public void setHomeAddress(Address homeAddress) {
-        this.homeAddress = homeAddress;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @OneToMany(mappedBy="member")
